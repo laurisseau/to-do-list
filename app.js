@@ -10,9 +10,12 @@ mongoose.connect("mongodb://localhost/todo_express", {
     useUnifiedTopology: true,
 })
 
+// recieve req
+app.use(express.json())
+
 // routes
 app.use(todoRoute)
 
 // server config
-app.listen(3000, ()=> console.log("working..."))
+app.listen(3000, ()=> console.log("running on port 3000..."))
 
